@@ -24,7 +24,7 @@ int main() {
     double end = omp_get_wtime();
 
     printf("La suma total sin usar paralelismo es: %lld \n", sum);
-    printf("Tiempo secuencial: %.4f segundos\n", end - start);
+    printf("Tiempo real: %.4f segundos\n", end - start);
 
     //ahora usando paralellismo sin reduction
     double start_par = omp_get_wtime();
@@ -37,7 +37,7 @@ int main() {
     double end_par = omp_get_wtime();
 
     printf("\nLa suma total usando paralelismo es: %lld \n", sum_paralela);
-    printf("Tiempo secuencial: %.4f segundos\n", end_par - start_par);
+    printf("Tiempo real: %.4f segundos\n", end_par - start_par);
 
     //ahora usando paralellismo con reduction
     double start_par_red = omp_get_wtime();
@@ -50,7 +50,7 @@ int main() {
     double end_par_red = omp_get_wtime();
 
     printf("\nLa suma total usando paralelismo y reduction es es: %lld \n", sum_paralela_red);
-    printf("Tiempo secuencial: %.4f segundos\n", end_par_red - start_par_red);
+    printf("Tiempo real: %.4f segundos\n", end_par_red - start_par_red);
     
     return 0;
 }
