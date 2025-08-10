@@ -29,7 +29,7 @@ int main() {
     printf("La suma total de numeros pares sin usar paralelismo es: %lld \n", sum);
     printf("Tiempo real: %.4f segundos\n", end - start);
 
-    //ahora usando paralellismo sin reduction
+    //ahora usando paralellismo sin reduction pero con critical
     double start_par = omp_get_wtime();
 
     #pragma omp parallel for
