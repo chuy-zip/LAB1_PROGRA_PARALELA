@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <omp.h>
 
-#define N 40
+#define N 10000
 
 int main() {
     int num_threads = 4;
@@ -26,7 +26,7 @@ int main() {
                 suma += j % 7;
             }
         }
-        printf("Static - Hilo %d ejecuta i = %d\n", omp_get_thread_num(), i);
+        //printf("Static - Hilo %d ejecuta i = %d\n", omp_get_thread_num(), i);
     }
     end = omp_get_wtime();
     float static_tiempo = end - start;
@@ -47,7 +47,7 @@ int main() {
                 suma += j % 7;
             }
         }
-        printf("Dynamic - Hilo %d ejecuta i = %d\n", omp_get_thread_num(), i);
+        //printf("Dynamic - Hilo %d ejecuta i = %d\n", omp_get_thread_num(), i);
     }
     end = omp_get_wtime();
 
@@ -68,7 +68,7 @@ int main() {
                 suma += j % 7;
             }
         }
-        printf("Guided - Hilo %d ejecuta i = %d\n", omp_get_thread_num(), i);
+        //printf("Guided - Hilo %d ejecuta i = %d\n", omp_get_thread_num(), i);
     }
     end = omp_get_wtime();
 
